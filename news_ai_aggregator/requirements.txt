@@ -1,0 +1,6 @@
+requests
+beautifulsoup4
+google-generativeai
+Flask
+newspaper3k
+lxml_html_clean
