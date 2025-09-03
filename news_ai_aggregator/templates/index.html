@@ -24,8 +24,16 @@
       {% if headlines %}
         <div class="list-group">
           {% for article in headlines %}
-            <a href="{{ article.link }}" class="list-group-item list-group-item-action">
-              {{ article.headline }}
+            <a href="{{ article.link }}" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+              {% if article.image_url %}
+                <img src="{{ article.image_url }}" alt="Article image" width="100" height="100" class="rounded-circle flex-shrink-0">
+              {% endif %}
+              <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                  <h6 class="mb-0">{{ article.headline }}</h6>
+                  <p class="mb-0 opacity-75">Click to read the AI summary.</p>
+                </div>
+              </div>
             </a>
           {% endfor %}
         </div>

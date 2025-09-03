@@ -27,7 +27,8 @@ def get_article_details(article):
         return {
             'headline': article.title,
             'text': article.text,
-            'link': article.url
+            'link': article.url,
+            'image_url': article.top_image
         }
     except Exception as e:
         # Don't print errors for every article, can be noisy.
